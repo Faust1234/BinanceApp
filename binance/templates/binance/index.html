@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Binance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+<body class="d-flex h-100 text-14 text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <header class="mb-auto">
+            <div>
+              <a class="btn btn-light " href="/" >Binance</a>
+              <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="btn btn-secondary" aria-current="page" href="/edit-page">Log in</a>
+
+
+
+
+
+
+                <a class="btn btn-secondary" href="#">Exit</a>
+              </nav>
+            </div>
+          </header>
+
+
+{% block content %}
+
+        <table class="table table-striped table-dark text-white mt-n1" >
+
+
+
+              <thead>
+                <tr>
+                  <th scope="col">Number</th>
+                  <th scope="col">Create Date</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Text</th>
+                  <th scope="col">Go to it</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              {% for i in list_articles %}
+                <tr>
+                  <th scope="row">{{ forloop.counter  }}</th>
+                  <td>{{ i.create_date }}</td>
+                  <td>{{ i.name }}</td>
+                  <td><span>{{ i.text | truncatechars:'10'}}</span></td>
+                  <td><span><a class="text-white bg-dark" href="/edit-page">Go to it</a></span></td>
+
+
+
+
+
+                </tr>
+                {% endfor %}
+
+
+
+              </tbody>
+
+        </table>
+
+
+
+{% endblock %}
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<!--information/{{ i.id }}-->

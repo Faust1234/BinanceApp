@@ -1,0 +1,25 @@
+{% extends "binance/index.html" %}
+{% block content %}
+     <header class="mb-auto">
+            <div>
+              <h3 class="float-md-start mt-3 mb-5">Currency: {{ get_article.name}}</h3>
+              <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="btn btn-dark" aria-current="page" href="/">Go to beak</a>
+
+
+
+
+
+              </nav>
+
+            </div>
+          </header>
+        <p>Data: {{ get_article.create_date}}</p>
+        <p>Name: {{ get_article.name}}</p>
+        <p>Text: {{ get_article.text}}</p>
+
+
+{% endblock %}
+
+
+
